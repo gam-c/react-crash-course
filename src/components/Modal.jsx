@@ -1,17 +1,25 @@
-import './Modal.css'
+import "./Modal.css";
 
-function Modal(){
-   return (
+function Modal({ question }) {
+  return (
     <>
-       <div className="modal"> 
-            <p className="modal__title">Are you sure?</p> 
-            <div className="modal__buttons"> 
-                <button className="btn btn__cancel">Cancel</button> <button className="btn">Confirm</button>
-            </div>
+      <div className="modal">
+        <p className="modal__title">{question}</p>
+        <div className="modal__buttons">
+          <button
+            className="btn btn__cancel"
+            onClick={() => console.log("Cancel")}
+          >
+            Cancel
+          </button>{" "}
+          <button className="btn" onClick={() => console.log("Confirm")}>
+            Confirm
+          </button>
         </div>
-        <div className="backdrop" />   
+      </div>
+      <div className="backdrop" />
     </>
-    )
+  );
 }
 
-export default Modal
+export default Modal;
